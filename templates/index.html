@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIKAS RANA | PORTFOLIO</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+<header>
+  <h1>VIKAS RANA</h1>
+</header>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#Project">Project</a></li>
+  <li><a href="#About">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<section id="home">
+  <img src="{{ url_for('static', filename='assets/profile.jpg') }}" alt="Profile" style="width: 140px; height: auto; border-radius: 70%;">
+  <h2 class="fade-in">Hi, I'm <span>Vikas Rana</span></h2>
+  <p class="fade-in-delay">A data analyst and aviation enthusiast ready to take off 🚀</p>
+</section>
+
+<section id="About">
+  <h3>About Me</h3>
+  <p>I am currently pursuing BBA Aviation from UPES. I love working with data and exploring sci-fi ideas in my free time.</p>
+</section>
+
+<section id="Project">
+  <div class="projects">
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='assets/project1.png') }}" alt="Project 1">
+      <h4>Airline Delay Dashboard</h4>
+      <p>Built using Python, Pandas & Power BI to visualize delay data.</p>
+    </div>
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='assets/project2.png') }}" alt="Project 2">
+      <h4>ESG Case Study</h4>
+      <p>Analyzed sustainability metrics for Himalayan Haat, Dehradun.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3>Contact Me</h3>
+  <form action="/submit" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <p>Phone Number: +91 7456930050</p>
+  <p>Email ID: Vikasranaok@gmail.com</p>
+</section>
+
+<footer>
+  © 2025 Vikas Rana. All rights reserved
+</footer>
+</body>
+</html>
+
